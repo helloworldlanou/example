@@ -3,6 +3,7 @@ package example.algorithm;
 public class Commondivisor {
 
 	/**
+	 * 求最大公约数，辗转相除法
 	 * @param args
 	 */
 	
