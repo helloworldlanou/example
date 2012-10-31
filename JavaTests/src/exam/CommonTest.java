@@ -17,6 +17,7 @@ public class CommonTest {
 		System.out.println();
 		System.out.println("size="+x[j].length);
 		}
+		System.out.println("haha");
 	}
 
 }
