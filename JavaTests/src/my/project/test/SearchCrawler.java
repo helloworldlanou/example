@@ -1,4 +1,4 @@
-package my.project;
+package my.project.test;
 
 import java.util.*;
 import java.net.*;
