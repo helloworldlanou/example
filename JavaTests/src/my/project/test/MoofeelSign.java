@@ -173,12 +173,14 @@ public class MoofeelSign {
 	  return responseBody;
 	 }
 
-	 public void sign() {
+	 public void sign() throws InterruptedException {
 		 String signUrl = null;
+		 int count = 0;
 		 if (login()) {
 			 boolean isfind = false;
 			 //找到最新一条，如果没有则等待一下继续找
 			 while(!isfind){
+				 System.out.println("第"+count++ + "次尝试");
 				 Document doc = Jsoup.parse(getText(site));
 				 Elements tbodys = doc.getElementsByClass("new");
 				 Element e = tbodys.get(0);
@@ -192,6 +194,7 @@ public class MoofeelSign {
 					 isfind = true; 
 					 signUrl = e.attr("abs:href");
 				 }
+				 Thread.sleep(200);
 			 }
 			 this.replyAndFetch(signUrl);
 		 }
