@@ -55,6 +55,7 @@ public class MoofeelSign {
      
 
 	 public static void main(String[] args) throws Exception {
+		 Thread.sleep(1000*60*16);
 		 MoofeelSign moofeel = new MoofeelSign();
 		 moofeel.sign();
 	 }
@@ -181,21 +182,32 @@ public class MoofeelSign {
 			 //找到最新一条，如果没有则等待一下继续找
 			 while(!isfind){
 				 System.out.println("第"+count++ + "次尝试");
-				 Document doc = Jsoup.parse(getText(site));
-				 Elements tbodys = doc.getElementsByClass("new");
-				 Element e = tbodys.get(0);
-				 if(e!=null){
-					 e = e.getElementsByTag("a").get(0);
-				 }
-				 String title = e.childNodes().get(0).toString();
-				 Calendar calendar = Calendar.getInstance();
-				 Pattern pattern = Pattern.compile(".*"+calendar.get(Calendar.YEAR)+".*"+(calendar.get(Calendar.MONTH)+1)+".*"+calendar.get(Calendar.DAY_OF_MONTH));
-				 if(pattern.matcher(title).find()){
-					 isfind = true; 
-					 signUrl = e.attr("abs:href");
-				 }
-				 Thread.sleep(200);
+				try {
+					Document doc = Jsoup.parse(getText(site));
+					 //找到所有class为new的，其中可有有提醒，要过滤一下
+					 Elements tbodys = doc.getElementsByClass("new");
+					 tbodys.append("<a href=\"http://www.baidu.com\"></a>");
+					 Element e = null;
+					 for (Element element : tbodys) {
+						if(element.getElementsByTag("a").get(0).attr("class").equals("xst")){
+							e = element.getElementsByTag("a").get(0);
+						}
+					}
+					 if(e==null) continue;
+					 String title = e.childNodes().get(0).toString();
+					 Calendar calendar = Calendar.getInstance();
+					 Pattern pattern = Pattern.compile(".*"+calendar.get(Calendar.YEAR)+".*"+(calendar.get(Calendar.MONTH)+1)+".*"+calendar.get(Calendar.DAY_OF_MONTH));
+					 if(pattern.matcher(title).find()){
+						 isfind = true; 
+						 signUrl = e.attr("abs:href");
+					 }
+					 Thread.sleep(200);
+				} catch (Exception e) {
+					e.printStackTrace();
+					continue;
+				}
 			 }
+			 //回复最新的签到帖子，并领取MB
 			 this.replyAndFetch(signUrl);
 		 }
 		 httpclient.getConnectionManager().shutdown();
