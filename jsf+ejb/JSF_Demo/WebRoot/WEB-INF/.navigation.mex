@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSFFlowViewLayout version="1.0">
+  <Drawing gridVisible="true" snapOn="true" />
+  <JSFFlowResource path="/hdty/project/system/personInsert.jsp" location="23,237" dimension="264,36" />
+  <JSFFlowResource path="/hdty/project/system/personList.jsp" location="30,126" dimension="250,36" />
+  <JSFFlowResource path="/hdty/project/system/personUpdate.jsp" location="59,0" dimension="274,36" />
+  <JSFFlowNavigationCase id="/hdty/project/system/personInsert.jsp,/hdty/project/system/personList.jsp,inserted,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="221,237" />
+      <AbsolutePoint location="221,199" />
+      <AbsolutePoint location="217,199" />
+      <AbsolutePoint location="217,162" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/hdty/project/system/personList.jsp,/hdty/project/system/personList.jsp,deleted,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="71,126" />
+      <AbsolutePoint location="71,96" />
+      <AbsolutePoint location="0,96" />
+      <AbsolutePoint location="0,144" />
+      <AbsolutePoint location="30,144" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/hdty/project/system/personList.jsp,/hdty/project/system/personInsert.jsp,insert,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="92,162" />
+      <AbsolutePoint location="92,199" />
+      <AbsolutePoint location="89,199" />
+      <AbsolutePoint location="89,237" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/hdty/project/system/personUpdate.jsp,/hdty/project/system/personList.jsp,updated,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="128,36" />
+      <AbsolutePoint location="128,66" />
+      <AbsolutePoint location="155,66" />
+      <AbsolutePoint location="155,126" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+  <JSFFlowNavigationCase id="/hdty/project/system/personUpdate.jsp,/hdty/project/system/personList.jsp,deleted,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="265,36" />
+      <AbsolutePoint location="265,66" />
+      <AbsolutePoint location="238,66" />
+      <AbsolutePoint location="238,126" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+</JSFFlowViewLayout>
+
