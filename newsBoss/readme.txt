@@ -11,4 +11,4 @@ create database boss default character set utf8
 source newboss/database/boss2.sql
 edit hibernate.cfg.xml set mysql passwd and name
 runserver¼´¿É¡£
-figo qwe123
+admin qwe123
