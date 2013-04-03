@@ -8,6 +8,7 @@ MYSQL
 project-->clean一下
 buildpath里调整下，绑定本地jdk和server
 create database boss default character set utf8
-source newboss2/database/boss.sql
+source newboss/database/boss2.sql
 edit hibernate.cfg.xml set mysql passwd and name
 runserver即可。
+figo qwe123
