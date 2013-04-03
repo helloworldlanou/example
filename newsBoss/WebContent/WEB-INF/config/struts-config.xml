@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<data-sources />
+<form-beans>
+    <form-bean name="pageListForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="first" type="java.lang.Integer" />
+      <form-property name="fetch" type="java.lang.Integer" />
+      <form-property name="totalpage" type="java.lang.Integer" />
+      <form-property name="pagenum" type="java.lang.Integer" />      
+      <form-property name="totalnum" type="java.lang.Integer" />
+      
+      <form-property name="q1" type="java.lang.String" />                 
+      <form-property name="q2" type="java.lang.String" />
+      <form-property name="q3" type="java.lang.String" />      
+      <form-property name="q4" type="java.lang.String" />
+      <form-property name="q5" type="java.lang.String" />
+      <form-property name="q6" type="java.lang.String" />
+      <form-property name="q7" type="java.lang.String" />
+      <form-property name="q8" type="java.lang.String" />
+      <form-property name="q9" type="java.lang.String" />
+      <form-property name="q10" type="java.lang.String"/>   
+      <form-property name="q11" type="java.lang.String"/>
+      <form-property name="q12" type="java.lang.String"/>
+      <form-property name="q13" type="java.lang.String"/>
+    </form-bean>
+</form-beans>
+<global-exceptions>
+<exception key="otherException" type="java.lang.Exception" scope="request" path="/error.jsp"></exception>
+</global-exceptions>
+<global-forwards />
+<action-mappings >
+</action-mappings>
+<message-resources parameter="resource.struts.ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<daoContext>
+	<dao id="boNodeDao" class="dao.system.BoNodeDao"/>
+	<dao id="boPersonDao" class="dao.system.BoPersonDao"/>
+	<dao id="boDepartmentDao" class="dao.system.BoDepartmentDao"/>
+	<dao id="boRoleDao" class="dao.system.BoRoleDao"/>
+	<dao id="boRoleNodeDao" class="dao.system.BoRoleNodeDao"/>	
+	
+	<dao id="boLinksDao" class="dao.management.BoLinksDao"/>
+	<dao id="boLinksSortDao" class="dao.management.BoLinksSortDao"/>
+	<dao id="boSpecialDao" class="dao.management.BoSpecialDao"/>
+	<dao id="boNewsDao" class="dao.news.BoNewsDao"/>
+	<dao id="boNavigationDao" class="dao.management.BoNavigationDao"/>
+	<dao id="boParameterDao" class="dao.management.BoParameterDao"/>
+	<dao id="boFacilityTypeDao" class="dao.facility.BoFacilityTypeDao"/>
+	<dao id="boFacilityDao" class="dao.facility.BoFacilityDao"/>
+</daoContext>

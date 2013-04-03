@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/linksAction.do" location="18,277" dimension="220,84" />
+  <StrutsActivity path="/navigationAction.do" location="640,0" dimension="250,84" />
+  <StrutsActivity path="/WEB-INF/jsp/management/addlinks.jsp" location="0,461" dimension="256,48" />
+  <StrutsActivity path="/WEB-INF/jsp/management/navigation_manage.jsp" location="0,184" dimension="310,48" />
+  <StrutsActivity path="/WEB-INF/jsp/management/navigation_modify.jsp" location="410,184" dimension="310,48" />
+  <StrutsActivity path="/WEB-INF/jsp/management/navigation_add.jsp" location="820,184" dimension="292,48" />
+  <StrutsActivity path="/WEB-INF/jsp/system/index/frame.jsp" location="1212,184" dimension="250,48" />
+  <StrutsTransition id="/navigationAction.do,toManagePage,/WEB-INF/jsp/management/navigation_manage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="671,84" />
+      <AbsolutePoint location="671,119" />
+      <AbsolutePoint location="155,119" />
+      <AbsolutePoint location="155,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/navigationAction.do,toAddPage,/WEB-INF/jsp/management/navigation_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,84" />
+      <AbsolutePoint location="796,149" />
+      <AbsolutePoint location="966,149" />
+      <AbsolutePoint location="966,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/navigationAction.do,toModifyPage,/WEB-INF/jsp/management/navigation_modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="734,84" />
+      <AbsolutePoint location="734,149" />
+      <AbsolutePoint location="565,149" />
+      <AbsolutePoint location="565,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/navigationAction.do,toFramePage,/WEB-INF/jsp/system/index/frame.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="859,84" />
+      <AbsolutePoint location="859,119" />
+      <AbsolutePoint location="1337,119" />
+      <AbsolutePoint location="1337,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/linksAction.do,toAddPage,/WEB-INF/jsp/management/addlinks.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="128,361" />
+      <AbsolutePoint location="128,461" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

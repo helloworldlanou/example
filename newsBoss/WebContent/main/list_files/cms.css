@@ -1,0 +1,57 @@
+BODY {
+	BACKGROUND-COLOR: #e6e6e6
+}
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: "宋体"
+}
+TD {
+	FONT-SIZE: 12px; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: "宋体"
+}
+A:link {
+	FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A:visited {
+	FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.black12sdw {
+	BACKGROUND-POSITION: 2px 50%; FONT-SIZE: 12px; COLOR: #000000; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.black12 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 19px; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.black666 {
+	FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 19px; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.color146D65 {
+	FONT-SIZE: 12px; COLOR: #146d65; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.bkbox {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.red14b {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #993300; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.txt14 {
+	FONT-SIZE: 14px; COLOR: #000000; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.hbox {
+	BORDER-RIGHT: #b4b4b4 1px solid; BORDER-TOP: #b4b4b4 1px solid; BORDER-LEFT: #b4b4b4 1px solid; BORDER-BOTTOM: #b4b4b4 1px solid
+}
+.green12 {
+	FONT-SIZE: 12px; COLOR: #146d65; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.color04423D {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #04423d; FONT-FAMILY: "宋体"
+}
+.w12 {
+	FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 130%; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.cmstitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #993300; LINE-HEIGHT: 20px
+}
+.cmscontent {
+	FONT-SIZE: 14px; LINE-HEIGHT: 20px
+}

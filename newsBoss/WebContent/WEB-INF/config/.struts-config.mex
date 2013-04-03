@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/WEB-INF/jsp/system/index/frame.jsp" location="50,650" dimension="251,53" />
+  <StrutsActivity path="/WEB-INF/jsp/system/node/node_manage.jsp" location="650,650" dimension="298,53" />
+  <StrutsActivity path="/WEB-INF/jsp/system/index/menu.jsp" location="50,850" dimension="249,53" />
+</FlowViewLayout>
+

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >    
+   <action
+      path="/loginAction"
+      parameter="action" scope="request" 
+      type="action.system.LoginAction"
+      validate="false">
+      <forward name="toLoginPage" path="/WEB-INF/jsp/system/login/login.jsp" redirect="false"/>
+      <forward name="toFramePage" path="/WEB-INF/jsp/system/index/frame.jsp" redirect="false"/>
+      <forward name="toErrorPage" path="/WEB-INF/jsp/system/login/login_error.jsp" redirect="false"/>
+      
+    </action>
+ 
+   <action
+      path="/menuAction"
+      parameter="action" scope="request" 
+      type="action.system.MenuAction"
+      validate="false">
+      <forward name="toMenuPage" path="/WEB-INF/jsp/system/index/menu.jsp" redirect="false"/>
+      <forward name="toNodeManagePage" path="/WEB-INF/jsp/system/node/node_manage.jsp" redirect="false"/>
+      <forward name="toAddNodeFather" path="/WEB-INF/jsp/system/node/node_add_father.jsp" redirect="false"/>
+      <forward name="toAddNodeChild" path="/WEB-INF/jsp/system/node/node_add_child.jsp" redirect="false"/>
+      <forward name="toNodeModify" path="/WEB-INF/jsp/system/node/node_modify.jsp" redirect="false"/>
+      <forward name="toFramePage" path="/WEB-INF/jsp/system/index/frame.jsp" redirect="false"/>  
+    </action>
+
+   <action
+      path="/personAction"
+      parameter="action" scope="request" 
+      type="action.system.PersonAction"
+      name="pageListForm"
+      validate="false">
+      <forward name="toManagePage" path="/WEB-INF/jsp/system/person/person_manage.jsp" redirect="false"/>
+      <forward name="toDepManagePage" path="/WEB-INF/jsp/system/department/department_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/system/person/person_add.jsp" redirect="false"/>
+      <forward name="toIconPage" path="/WEB-INF/jsp/system/person/person_icon.jsp" redirect="false"/> 
+      <forward name="toModifyPage" path="/WEB-INF/jsp/system/person/person_modify.jsp" redirect="false"/>   
+      <forward name="toPwdChange" path="/WEB-INF/jsp/system/person/change_password.jsp" redirect="false"/>   
+      <forward name="toModifyInfo" path="/WEB-INF/jsp/system/person/person_info_modify.jsp" redirect="false"/>   
+        
+    </action>
+    
+    <action
+      path="/departmentAction"
+      parameter="action" scope="request" 
+      type="action.system.DepartmentAction"
+      validate="false">
+      <forward name="toManagePage" path="/WEB-INF/jsp/system/department/department_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/system/department/department_add.jsp" redirect="false"/>
+      <forward name="toModifyPage" path="/WEB-INF/jsp/system/department/department_modify.jsp" redirect="false"/>
+      <forward name="toIconPage" path="/WEB-INF/jsp/system/department/department_icon.jsp" redirect="false"/>
+    
+    
+    </action>
+
+
+   <action
+      path="/roleAction"
+      parameter="action" scope="request" 
+      type="action.system.RoleAction"
+      name="pageListForm"
+      validate="false">
+      <forward name="toManagePage" path="/WEB-INF/jsp/system/role/role_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/system/role/role_add.jsp" redirect="false"/>
+      <forward name="toIconPage" path="/WEB-INF/jsp/system/role/role_icon.jsp" redirect="false"/> 
+      <forward name="toModifyPage" path="/WEB-INF/jsp/system/role/role_modify.jsp" redirect="false"/>   
+      <forward name="to_role_person" path="/WEB-INF/jsp/system/role/role_person.jsp" redirect="false"/>   
+      <forward name="to_role_right" path="/WEB-INF/jsp/system/role/role_right.jsp" redirect="false"/>     
+    </action>
+
+	<action path="/top" type="org.apache.struts.actions.ForwardAction" parameter="/WEB-INF/jsp/system/index/top.jsp"/>
+	<action path="/menu" type="org.apache.struts.actions.ForwardAction" parameter="/WEB-INF/jsp/system/index/menu.jsp"/>
+	<action path="/middle" type="org.apache.struts.actions.ForwardAction" parameter="/WEB-INF/jsp/system/index/middle.jsp"/>
+	<action path="/main" type="org.apache.struts.actions.ForwardAction" parameter="/WEB-INF/jsp/system/index/main.jsp"/>
+	<action path="/bottom" type="org.apache.struts.actions.ForwardAction" parameter="/WEB-INF/jsp/system/index/bottom.jsp"/>
+	<action path="/construction" type="org.apache.struts.actions.ForwardAction" parameter="/WEB-INF/jsp/system/index/error_construct.jsp"/>
+
+
+
+   <action
+      attribute="pageListForm"
+      name="pageListForm"
+      parameter="action"
+      path="/mainAction"
+      scope="request"
+      type="action.main.MainAction"
+      validate="false">
+      <forward name="toSecondaryPage" path="/WEB-INF/jsp/main/secondary.jsp" />
+      <forward name="toSpecialDetailPage" path="/WEB-INF/jsp/main/specialdetail.jsp" />
+      <forward name="toSpecialSecondaryPage" path="/WEB-INF/jsp/main/specialsecondary.jsp" />
+      <forward name="toDetailPage" path="/WEB-INF/jsp/main/detail.jsp" />
+      <forward name="toIndexPage" path="/WEB-INF/jsp/main/main.jsp" />
+      <forward name="toFacilityPage" path="/WEB-INF/jsp/main/facility.jsp" />
+            <forward name="downloadPage" path="/WEB-INF/jsp/main/download.jsp" />
+    </action>
+    
+       <action
+      attribute="pageListForm"
+      name="pageListForm"
+      parameter="action"
+      path="/enAction"
+      scope="request"
+      type="action.main.EnAction"
+      validate="false">
+      <forward name="toSecondaryPage" path="/WEB-INF/jsp/en/secondary.jsp" />
+      <forward name="toSpecialDetailPage" path="/WEB-INF/jsp/en/specialdetail.jsp" />
+      <forward name="toSpecialSecondaryPage" path="/WEB-INF/jsp/en/specialsecondary.jsp" />
+      <forward name="toDetailPage" path="/WEB-INF/jsp/en/detail.jsp" />
+      <forward name="toIndexPage" path="/WEB-INF/jsp/en/main.jsp" />
+      <forward name="toFacilityPage" path="/WEB-INF/jsp/en/facility.jsp" />
+      <forward name="downloadPage" path="/WEB-INF/jsp/en/download.jsp" />
+    </action>
+
+  </action-mappings>
+</struts-config>
+

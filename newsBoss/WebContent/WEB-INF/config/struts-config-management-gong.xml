@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<data-sources />
+<form-beans>
+</form-beans>
+<global-exceptions />
+<global-forwards />
+<action-mappings >
+
+    
+    <action
+      parameter="action"
+      path="/parameterAction"
+      scope="request"
+      type="action.management.ParameterAction" >
+      <forward   name="toModifyInfo" path="/WEB-INF/jsp/management/system_parameter/system_para_modify.jsp"/>
+    </action>
+    
+    <action
+      parameter="action"
+      path="/navigationAction"
+      scope="request"
+      type="action.management.NavigationAction" >
+ 	  <forward name="toManagePage" path="/WEB-INF/jsp/management/navigation/navigation_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/management/navigation/navigation_add.jsp" redirect="false"/>
+      <forward name="toModifyPage" path="/WEB-INF/jsp/management/navigation/navigation_modify.jsp" redirect="false"/>
+
+    </action>
+
+</action-mappings>
+</struts-config>
+

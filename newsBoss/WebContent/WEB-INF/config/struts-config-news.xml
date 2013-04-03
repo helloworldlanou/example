@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<data-sources />
+<form-beans>
+</form-beans>
+<global-exceptions />
+<global-forwards />
+<action-mappings >
+    <action
+   
+      parameter="action"
+      path="/newsAction"
+      scope="request"
+      type="action.news.NewsAction"
+      validate="false">
+      <forward name="toModifyPage" path="/WEB-INF/jsp/news/news_modify.jsp" />
+      <forward name="toAddPage" path="/WEB-INF/jsp/news/news_add.jsp" />
+      <forward name="toManagePage" path="/newsManageAction.do?action=toManagePage" />
+    </action>
+    <action
+     parameter="action"
+     attribute="pageListForm"
+     name="pageListForm" 
+     path="/newsManageAction" 
+      scope="request"
+     type="action.news.NewsManageActionAction" >
+     <forward name="toManagePage" path="/WEB-INF/jsp/news/news_management.jsp" />
+     <forward name="toCheckPage" path="/WEB-INF/jsp/news/news_check.jsp" />
+     <forward name="toViewPage" path="/WEB-INF/jsp/news/news_view.jsp" />
+     </action>
+     
+
+
+</action-mappings>
+</struts-config>
+

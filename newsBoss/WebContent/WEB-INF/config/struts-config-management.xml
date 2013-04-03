@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<data-sources />
+<form-beans>
+</form-beans>
+<global-exceptions />
+<global-forwards />
+<action-mappings >
+    <action
+      attribute="pageListForm"
+      name="pageListForm"
+      parameter="action"
+      path="/linksAction"
+      scope="request"
+      type="action.management.LinksAction">
+      <forward name="toModifyLinksPage" path="/WEB-INF/jsp/management/modifylinks.jsp" redirect="false"/>
+      <forward name="toAddLinksSortPage" path="/WEB-INF/jsp/management/addlinkssort.jsp" redirect="false"/>
+      <forward name="toManagePage" path="/WEB-INF/jsp/management/links_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/management/addlinks.jsp" redirect="false"/>
+      <forward name="toModifyLinksSortPage" path="/WEB-INF/jsp/management/modifylinkssort.jsp" redirect="false"/>
+      <forward name="toLinksSortManagePage" path="/WEB-INF/jsp/management/linkssort_manage.jsp" redirect="false" />
+    </action>
+ <action
+      parameter="action"
+      path="/specialAction"
+      scope="request"
+      type="action.management.SpecialAction">
+      <forward name="toModifySpecialPage" path="/WEB-INF/jsp/management/special/modifyspecial.jsp" />
+      <forward name="toAddSpecialPage" path="/WEB-INF/jsp/management/special/addspecial.jsp" />
+      <forward name="toAddSmallSpecialPage" path="/WEB-INF/jsp/management/special/addsmallspecial.jsp" />
+      <forward name="toSmallManagePage" path="/WEB-INF/jsp/management/special/special_small_manage.jsp" />
+      <forward name="toModifySmallSpecialPage" path="/WEB-INF/jsp/management/special/modify_small_special.jsp" />
+      
+      
+      <forward name="toSpecialManagePage" path="/WEB-INF/jsp/management/special/special_manage.jsp" />
+    </action>
+
+
+</action-mappings>
+</struts-config>
+

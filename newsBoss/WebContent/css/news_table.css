@@ -1,0 +1,7 @@
+#news_table {
+border-collapse:collapse;
+}
+#news_table td{
+border:1px solid #FF0000;
+}
+

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>newsBoss</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/config/struts-config.xml,/WEB-INF/config/struts-config-system.xml,/WEB-INF/config/struts-config-news.xml,/WEB-INF/config/struts-config-management.xml,/WEB-INF/config/struts-config-management-gong.xml,/WEB-INF/config/struts-config-facility.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<filter>
+		<filter-name>setcharacterencodingfilter</filter-name>
+		<filter-class>
+			util.encode.SetCharacterEncodingFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>util.encode.LoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/tags/struts-bean</taglib-uri>
+			<taglib-location>
+				/WEB-INF/tags/struts-bean.tld
+			</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-html</taglib-uri>
+			<taglib-location>
+				/WEB-INF/tags/struts-html.tld
+			</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-logic</taglib-uri>
+			<taglib-location>
+				/WEB-INF/tags/struts-logic.tld
+			</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-nested</taglib-uri>
+			<taglib-location>
+				/WEB-INF/tags/struts-nested.tld
+			</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/tags/struts-tiles</taglib-uri>
+			<taglib-location>
+				/WEB-INF/tags/struts-tiles.tld
+			</taglib-location>
+		</taglib>
+	</jsp-config>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<filter-mapping>
+		<filter-name>setcharacterencodingfilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>sessionFilter</filter-name>
+		<filter-class>
+			util.hibernate.HibernateSessionFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sessionFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+
+	<listener>
+		<listener-class>
+			util.hibernate.FactoryLoaderListener
+		</listener-class>
+	</listener>
+
+ <listener> 
+  <listener-class>util.hibernate.StatisticListener</listener-class> 
+ </listener> 
+
+	<servlet>
+		<servlet-name>Connector</servlet-name>
+		<servlet-class>util.fckeditor.ConnectorServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>news.servlet.UploadServlet</servlet-class>
+		<init-param>
+			<param-name>savePath</param-name>
+			<param-value>upload</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Connector</servlet-name>
+		<url-pattern>
+			/fckeditor/editor/filemanager/connectors/*
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/servlet/upload</url-pattern>
+	</servlet-mapping>
+</web-app>

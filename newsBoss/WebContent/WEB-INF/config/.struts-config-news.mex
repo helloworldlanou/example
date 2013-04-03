@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/newsAction.do" location="150,180" dimension="178,84" />
+  <StrutsActivity path="/newsManageAction.do" location="240,300" dimension="148,84" />
+  <StrutsActivity path="/WEB-INF/jsp/news/news_modify.jsp" location="950,50" dimension="238,48" />
+  <StrutsActivity path="/WEB-INF/jsp/news/news_add.jsp" location="350,50" dimension="220,48" />
+  <StrutsActivity path="/WEB-INF/jsp/news/news_view.jsp" location="950,150" dimension="198,49" />
+  <StrutsActivity path="/WEB-INF/jsp/news/news_management.jsp" location="525,315" dimension="262,48" />
+  <StrutsActivity path="/WEB-INF/jsp/news/news_check.jsp" location="650,150" dimension="232,48" />
+  <StrutsActivity path="/WEB-INF/jsp/news/news_manage.jsp" location="650,50" dimension="238,48" />
+  <StrutsTransition id="/newsManageAction.do,toManagePage,/WEB-INF/jsp/news/news_management.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="388,342" />
+      <AbsolutePoint location="525,342" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/newsAction.do,toAddPage,/WEB-INF/jsp/news/news_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="239,180" />
+      <AbsolutePoint location="239,74" />
+      <AbsolutePoint location="350,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/newsManageAction.do,toCheckPage,/WEB-INF/jsp/news/news_check.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,300" />
+      <AbsolutePoint location="365,165" />
+      <AbsolutePoint location="650,165" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/newsAction.do,toManagePage,/newsManageAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="239,222" />
+      <AbsolutePoint location="314,342" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/newsAction.do,toModifyPage,/WEB-INF/jsp/news/news_modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="328,222" />
+      <AbsolutePoint location="1163,222" />
+      <AbsolutePoint location="1163,98" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/newsManageAction.do,toViewPage,/WEB-INF/jsp/news/news_view.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="314,342" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

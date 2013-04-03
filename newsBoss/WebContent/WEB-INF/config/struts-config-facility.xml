@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+  
+   <form-bean name="facilityForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="price" type="java.lang.String" />
+      <form-property name="des" type="java.lang.String" />
+      <form-property name="num" type="java.lang.String" />      
+      <form-property name="salePrice" type="java.lang.String" />     
+      <form-property name="size" type="java.lang.String" />                 
+      <form-property name="simage" type="java.lang.String" />
+      <form-property name="bimage" type="java.lang.String" />
+      <form-property name="fid" type="java.lang.String" /> 
+      <form-property name="enname" type="java.lang.String" /> 
+      <form-property name="fileField" type="org.apache.struts.upload.FormFile" />       
+    </form-bean>
+  
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >    
+   
+
+   <action
+      path="/facilityTypeAction"
+      parameter="action" scope="request" 
+      type="action.facility.FacilityTypeAction"
+      name="pageListForm"
+      validate="false">
+      <forward name="toManagePage" path="/WEB-INF/jsp/facility/facility_type_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/facility/facility_type_add.jsp" redirect="false"/>
+      <forward name="toModifyPage" path="/WEB-INF/jsp/facility/facility_type_modify.jsp" redirect="false"/>   
+        
+    </action>
+    
+    
+      <action
+      path="/facilityAction"
+      parameter="action" scope="request" 
+      type="action.facility.FacilityAction"
+      name="pageListForm"
+      attribute= "pageListForm" 
+      validate="false">
+      <forward name="toManagePage" path="/WEB-INF/jsp/facility/facility_manage.jsp" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/facility/facility_add.jsp" redirect="false"/>
+      <forward name="toModifyPage" path="/WEB-INF/jsp/facility/facility_modify.jsp" redirect="false"/>   
+        
+    </action>
+    
+    <action
+      path="/addFacilityAction"
+      parameter="action" scope="request" 
+      type="action.facility.FacilityAction"
+      name="facilityForm"
+      attribute= "facilityForm" 
+      validate="false">
+      <forward name="toManagePage" path="/facilityAction.do?action=toManagePage" redirect="false"/>
+      <forward name="toAddPage" path="/WEB-INF/jsp/facility/facility_add.jsp" redirect="false"/>
+      <forward name="toModifyPage" path="/WEB-INF/jsp/facility/facility_modify.jsp" redirect="false"/>   
+        
+    </action>
+   
+
+  </action-mappings>
+</struts-config>
+
