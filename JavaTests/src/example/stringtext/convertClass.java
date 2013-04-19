@@ -22,6 +22,9 @@ public class convertClass {
 		
 		convertClass cc = new convertClass();
 		System.out.println(cc.convert("我是中国人abc"));
+		
+		int a = (Integer) null;
+		System.out.println(a);
 	}
 
 }
