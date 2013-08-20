@@ -9,7 +9,7 @@
 #  error: command 'gcc' failed with exit status 1 Command /usr/bin/python -c "import setuptools;__file__='/tmp/pip-build-root/reportlab/setup.py';exec(compile(open(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-oneoII-record/install-record.txt --single-version-externally-managed failed with error code 1 in /tmp/pip-build-root/reportlab
 
 #  pip install reportlab
-# more reportlab example :http://www.reportlab.com/snippets/
+# more reportlab example :http://www.reportlab.com/snippets/ and reportlab-userguide
 from reportlab.lib import colors
 from urllib import urlopen
 from reportlab.graphics.shapes import *
