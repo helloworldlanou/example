@@ -1,4 +1,4 @@
-package exam.sjcp;
+package exam.sjcp.q16;
 
 public class Q16 {
 
@@ -19,7 +19,6 @@ public class Q16 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		parse("invalid");
-		StringBuilder sb = new StringBuilder("abc");
 	}
 
 }
