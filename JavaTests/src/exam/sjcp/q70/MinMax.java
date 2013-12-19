@@ -26,7 +26,6 @@ public class MinMax <N extends Integer>{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		List<int> a = new ArrayList();
-
 	}
 
 }
