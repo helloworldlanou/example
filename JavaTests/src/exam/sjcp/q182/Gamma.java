@@ -9,8 +9,14 @@ class Foo {
 	public void setX(int x) {
 		this.x = x;
 	}
-	
+	void update(int t) {
+		t = t + 10;
+	}
 }
+/**
+ * @author wz
+ * 形参实参传值问题
+ */
 public class Gamma {
 
 	static Foo fooBar(Foo foo){
@@ -37,10 +43,9 @@ public class Gamma {
 		System.out.print(foo.getX() + "-");
 		System.out.print(fooFoo.getX() + "-");
 		
-		foo = new Foo(300);
-		fooFoo = (new Gamma()).fooBar2(foo);
-		System.out.print(foo.getX() + "-");
-		System.out.print(fooFoo.getX() + "-");
+		int t = 100;
+		fooFoo.update(t);
+		System.out.print(t);
 	}
 
 }
