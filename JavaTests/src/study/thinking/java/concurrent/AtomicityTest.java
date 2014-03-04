@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 public class AtomicityTest implements Runnable{
 
-	private volatile int i = 0;
+	private int i = 0;//加 volatile 后程序无影响
 	public int getValue(){
 		return i;
 	}
@@ -13,8 +13,13 @@ public class AtomicityTest implements Runnable{
 		i++;
 		i++;
 	}
+	@Override
+	public void run() {
+		while(true){
+			evenIncrement();
+		}
+	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ExecutorService exec = Executors.newCachedThreadPool();
 		AtomicityTest at = new AtomicityTest();
 		exec.execute(at);
@@ -26,13 +31,4 @@ public class AtomicityTest implements Runnable{
 			}
 		}
 	}
-
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		while(true){
-			evenIncrement();
-		}
-	}
-
 }
