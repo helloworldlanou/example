@@ -1,4 +1,4 @@
-package exam.sjcp.q11;
+package exam.sjcp.q011;
 
 class Person{
 	String name = "No name";
