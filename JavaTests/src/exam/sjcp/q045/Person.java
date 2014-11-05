@@ -11,7 +11,6 @@ public class Person {
 				new Boolean(true),
 		};
 		Arrays.sort(myObjs);
-
 	}
 }
 
