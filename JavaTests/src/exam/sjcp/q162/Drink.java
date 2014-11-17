@@ -1,5 +1,6 @@
 package exam.sjcp.q162;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class Drink implements Comparable{
@@ -19,6 +20,10 @@ public class Drink implements Comparable{
 		set.add(one);
 		set.add(two);
 		System.out.println(set.size());
+		Iterator it = set.iterator();
+		while(it.hasNext()){
+			System.out.println(((Drink)it.next()).name);
+		}
 	}
 //	
 //	public void go(int x){

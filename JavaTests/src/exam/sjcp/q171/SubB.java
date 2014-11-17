@@ -17,6 +17,9 @@ public class SubB extends X{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new SubB().foo();
+		Integer.parseInt("4");
+		Integer.valueOf(4);
+
 
 	}
 
