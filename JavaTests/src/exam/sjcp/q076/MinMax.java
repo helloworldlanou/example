@@ -22,6 +22,7 @@ public class MinMax{
 		subs = (TreeSet<Integer>) s.subSet(608, true, 611, true);
 		s.add(609);
 		System.out.println(s + " " + subs);
+//		subs.add(613);
 	}
 
 }
